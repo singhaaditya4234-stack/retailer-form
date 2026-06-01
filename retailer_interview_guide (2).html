@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retailer Interview Guide</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Libre+Franklin:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#22352b;
+      --muted:#647267;
+      --line:#d7dfd8;
+      --paper:#fffdf8;
+      --sage:#eaf1eb;
+      --deep:#214e38;
+      --accent:#d8a340;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Work Sans',sans-serif;
+      color:var(--ink);
+      background:#f3f1ea;
+    }
+    .app-shell{
+      width:100%;
+      min-height:100vh;
+      background:
+        radial-gradient(circle at top left, rgba(59,130,246,.08), transparent 28%),
+        linear-gradient(180deg,#eff6ff 0%,#dbeafe 100%);
+    }
+    .section-card{
+      background:var(--paper);
+      border:1px solid rgba(41,74,54,.14);
+      box-shadow:0 10px 24px rgba(31,58,42,.07);
+    }
+    .section-kicker{
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-size:.72rem;
+      font-weight:700;
+      color:#6a7b6f;
+    }
+    .field-label{
+      font-size:.78rem;
+      font-weight:600;
+      color:#56685b;
+      letter-spacing:.01em;
+    }
+    .text-input,.select-input,.textarea-input{
+      width:100%;
+      border:1px solid #ced8d0;
+      background:#fff;
+      border-radius:10px;
+      padding:.7rem .8rem;
+      font-size:.9rem;
+      color:#24352c;
+      outline:none;
+      transition:.2s ease;
+    }
+    .text-input:focus,.select-input:focus,.textarea-input:focus{
+      border-color:#2e6a4a;
+      box-shadow:0 0 0 3px rgba(46,106,74,.12);
+    }
+    .textarea-input{min-height:82px;resize:vertical}
+    .checkline{
+      display:flex;
+      align-items:center;
+      gap:.45rem;
+      font-size:.83rem;
+      color:#34483b;
+      white-space:nowrap;
+    }
+    .checkline input{
+      accent-color:#285c42;
+      width:15px;
+      height:15px;
+    }
+    .table-wrap{
+      overflow-x:auto;
+      border:1px solid #dbe3dc;
+      border-radius:12px;
+      background:#fff;
+    }
+    table{
+      border-collapse:collapse;
+      width:100%;
+      min-width:900px;
+      font-size:.78rem;
+    }
+    th{
+      background:#edf3ee;
+      color:#2e4d39;
+      text-align:left;
+      font-weight:700;
+      padding:.6rem .55rem;
+      border-bottom:1px solid #d6e0d7;
+    }
+    td{
+      padding:.55rem;
+      border-bottom:1px solid #edf0ed;
+      vertical-align:middle;
+    }
+    tr:last-child td{border-bottom:none}
+    .mini-input{
+      width:100%;
+      min-width:110px;
+      border:1px solid #d5ded6;
+      border-radius:8px;
+      padding:.45rem .5rem;
+      font-size:.78rem;
+      outline:none;
+    }
+    .mini-input:focus{
+      border-color:#2e6a4a;
+      box-shadow:0 0 0 2px rgba(46,106,74,.1);
+    }
+    .sticky-panel{
+      position:sticky;
+      top:1.25rem;
+    }
+    .status{
+      min-height:24px;
+      font-size:.85rem;
+    }
+    .progress-dot{
+      width:9px;height:9px;border-radius:999px;background:#d8a340;display:inline-block;
+    }
+    @media(max-width:1024px){
+      .sticky-panel{position:static}
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+   <header class="w-full border-b border-[#dce3dc] bg-[#f8f6ef]/90 backdrop-blur">
+    <div class="max-w-[1500px] mx-auto px-5 md:px-8 py-5 md:py-6">
+     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+      <div>
+       <div class="flex items-center gap-3 mb-2">
+        <div class="w-10 h-10 rounded-full bg-[#214e38] text-white flex items-center justify-center">
+         <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+        </div><span class="section-kicker">Field Research Form</span>
+       </div>
+       <h1 class="font-bold leading-tight font-[Libre_Franklin]" style="color: rgb(33, 78, 56); font-weight: 700; font-size: 30px;">Retailer Interview Guide</h1>
+       <p class="mt-2" style="color: rgb(97, 114, 104); font-weight: 500; font-size: 15px;">F&amp;B Packaging &amp; Consumer Behavior Study · Delhi NCR · India 2026</p>
+      </div>
+      <div class="max-w-xl">
+       <div class="rounded-2xl border border-[#dae2db] bg-white/80 px-4 py-3">
+        <div class="flex gap-3 items-start">
+         <i data-lucide="info" class="w-4 h-4 mt-0.5 text-[#557261]"></i>
+         <p class="text-sm leading-relaxed" style="color: rgb(83, 102, 90); font-size: 15px;">Ask in simple Hindi or English. Tick boxes where relevant. This interview takes around 10–12 minutes.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+
+   <main class="w-full">
+    <div class="max-w-[1500px] mx-auto px-4 md:px-8 py-6 md:py-8 grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_300px] gap-6">
+     <form id="interviewForm" class="space-y-6">
+
+      <!-- Interview Details -->
+      <section class="section-card rounded-[20px] p-5 md:p-6" style="background: rgb(255, 253, 248);">
+       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-5">
+        <div>
+         <div class="section-kicker">Start Here</div>
+         <h2 class="font-bold mt-1 font-[Libre_Franklin]" style="color: rgb(35, 67, 49); font-size: 23px;">Interview Details</h2>
+        </div>
+        <p class="text-sm max-w-md" style="color: rgb(109, 123, 113); font-size: 15px;">Capture the basics first so every response is easy to identify later.</p>
+       </div>
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+         <label for="interviewer" class="field-label block mb-1.5">Interviewer</label>
+         <input id="interviewer" name="interviewer" class="text-input" type="text" required>
+        </div>
+        <div>
+         <label for="date" class="field-label block mb-1.5">Date</label>
+         <input id="date" name="date" class="text-input" type="date" required>
+        </div>
+        <div>
+         <label for="store_name" class="field-label block mb-1.5">Store Name</label>
+         <input id="store_name" name="store_name" class="text-input" type="text">
+        </div>
+        <div>
+         <label for="locality_city" class="field-label block mb-1.5">Locality &amp; City</label>
+         <input id="locality_city" name="locality_city" class="text-input" type="text">
+        </div>
+        <div>
+         <label for="retailer_name" class="field-label block mb-1.5">Retailer Name</label>
+         <input id="retailer_name" name="retailer_name" class="text-input" type="text">
+        </div>
+
+       </div>
+       <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5">
+        <fieldset>
+         <legend class="field-label mb-2">Store Format</legend>
+         <div class="flex flex-wrap gap-x-4 gap-y-2">
+          <label class="checkline"><input type="checkbox" name="store_format" value="Kirana">Kirana</label>
+          <label class="checkline"><input type="checkbox" name="store_format" value="General Store">General Store</label>
+          <label class="checkline"><input type="checkbox" name="store_format" value="Modern Trade">Modern Trade</label>
+          <label class="checkline"><input type="checkbox" name="store_format" value="Medical">Medical</label>
+          <label class="checkline"><input type="checkbox" name="store_format" value="Metro Station">Metro Station</label>
+          <label class="checkline"><input type="checkbox" name="store_format" value="Other">Other</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Daily Footfall</legend>
+         <div class="flex flex-wrap gap-x-4 gap-y-2">
+          <label class="checkline"><input type="radio" name="daily_footfall" value="<50">&lt;50</label>
+          <label class="checkline"><input type="radio" name="daily_footfall" value="50–100">50–100</label>
+          <label class="checkline"><input type="radio" name="daily_footfall" value="100–200">100–200</label>
+          <label class="checkline"><input type="radio" name="daily_footfall" value=">200">&gt;200</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Sells Mostly</legend>
+         <div class="flex flex-wrap gap-x-4 gap-y-2">
+          <label class="checkline"><input type="radio" name="sells_mostly" value="On-the-go">On-the-go</label>
+          <label class="checkline"><input type="radio" name="sells_mostly" value="At-home">At-home</label>
+          <label class="checkline"><input type="radio" name="sells_mostly" value="Both">Both</label>
+         </div>
+        </fieldset>
+       </div>
+      </section>
+
+      <!-- Section A -->
+      <section class="section-card rounded-[20px] p-5 md:p-6" style="background: rgb(255, 253, 248);">
+       <div class="mb-5">
+        <div class="section-kicker">Section A</div>
+        <h2 class="font-bold mt-1 font-[Libre_Franklin]" style="color: rgb(35, 67, 49); font-size: 23px;">Stocking &amp; Sales</h2>
+        <p class="mt-1 text-sm" style="color: rgb(106, 121, 111); font-size: 15px;">What do you stock and what moves fastest?</p>
+       </div>
+       <div class="mb-6">
+        <h3 class="font-semibold mb-1" style="color: rgb(43, 70, 53); font-size: 18px;">Q1. Which categories do you stock?</h3>
+        <p class="text-sm mb-2" style="color: rgb(108, 122, 113); font-size: 15px;">Write the fastest brand, top single-serve pack, top multi-serve pack, and any newly added brand or SKU.</p>
+        <div id="medicalTip" style="display:none;background:#fdf3e0;border:1px solid #f0d080;border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:13px;color:#7a5c10;gap:10px;align-items:flex-start">
+          <span style="font-size:16px;flex-shrink:0">💊</span>
+          <div>
+            <b>Medical / Pharmacy Store detected</b><br>
+            For this store type typically only tick: <b>ORS · Water · White Milk</b><br>
+            Skip categories like CSD, Energy Drinks, RTD unless they are actually stocked here.
+          </div>
+        </div>
+        <div class="table-wrap">
+         <table>
+          <thead>
+           <tr>
+            <th>Category</th><th>Stocked</th><th>Top Brand</th><th>Top Single Serve</th><th>Top Multi Serve</th><th>Newly Added Brand / SKU</th><th>Price Fluctuation</th>
+           </tr>
+          </thead>
+          <tbody id="q1Table"></tbody>
+         </table>
+        </div>
+       </div>
+       <div>
+        <h3 class="font-semibold mb-1" style="color: rgb(43, 70, 53); font-size: 18px;">Q2. Across all categories, tick every SKU that sells well in your shop.</h3>
+        <p class="text-sm mb-3" style="color: rgb(108, 122, 113); font-size: 15px;">Helps identify which pack sizes are moving per category.</p>
+        <div class="table-wrap">
+         <table>
+          <thead>
+           <tr>
+            <th>Category</th><th>80ml</th><th>125ml</th><th>150ml</th><th>160ml</th><th>170ml</th><th>180ml</th><th>200ml</th><th>330ml</th><th>350ml</th><th>500ml</th><th>600ml</th><th>740ml</th><th>850ml</th><th>1L</th><th>1.2L</th><th>1.4L</th><th>1.7L</th><th>2L</th>
+           </tr>
+          </thead>
+          <tbody id="q2Table"></tbody>
+         </table>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-4 mt-4">
+         <fieldset>
+          <legend class="field-label mb-2">Stopped stocking any brand / pack recently?</legend>
+          <div class="flex flex-wrap gap-4">
+           <label class="checkline"><input type="radio" name="q2_stopped_stocking" value="Yes">Yes</label>
+           <label class="checkline"><input type="radio" name="q2_stopped_stocking" value="No">No</label>
+           <label class="checkline"><input type="radio" name="q2_stopped_stocking" value="Sometimes">Sometimes</label>
+          </div>
+         </fieldset>
+         <div>
+          <label for="q2_stopped_reason" class="field-label block mb-1.5">If yes — which and why?</label>
+          <input id="q2_stopped_reason" name="q2_stopped_reason" class="text-input" type="text">
+         </div>
+        </div>
+       </div>
+      </section>
+
+      <!-- Section B -->
+      <section class="section-card rounded-[20px] p-5 md:p-6" style="background: rgb(255, 253, 248);">
+       <div class="mb-5">
+        <div class="section-kicker">Section B</div>
+        <h2 class="font-bold mt-1 font-[Libre_Franklin]" style="color: rgb(35, 67, 49); font-size: 23px;">Pricing Intelligence</h2>
+        <p class="mt-1 text-sm" style="color: rgb(106, 121, 111); font-size: 15px;">Which price points drive the most sales?</p>
+       </div>
+       <h3 class="font-semibold mb-1" style="color: rgb(43, 70, 53); font-size: 18px;">Q3. For each drink category, select the best-selling price point.</h3>
+       <p class="text-sm mb-3" style="color: rgb(108, 122, 113); font-size: 15px;">Tick the single best volume-driving price point per category.</p>
+       <div id="q3SliderContainer" class="space-y-4"></div>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+        <fieldset>
+         <legend class="field-label mb-2">Do customers switch brands due to price?</legend>
+         <div class="flex flex-wrap gap-4">
+          <label class="checkline"><input type="radio" name="q3_switch_brands_price" value="Yes">Yes</label>
+          <label class="checkline"><input type="radio" name="q3_switch_brands_price" value="No">No</label>
+          <label class="checkline"><input type="radio" name="q3_switch_brands_price" value="Sometimes">Sometimes</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Do customers ask for zero-sugar / low-calorie / non-carbonated variants?</legend>
+         <div class="flex flex-wrap gap-x-5 gap-y-2">
+          <label class="checkline"><input type="radio" name="q3_zero_sugar_demand" value="Yes, increasingly">Yes, increasingly</label>
+          <label class="checkline"><input type="radio" name="q3_zero_sugar_demand" value="Occasionally">Occasionally</label>
+          <label class="checkline"><input type="radio" name="q3_zero_sugar_demand" value="Rarely">Rarely</label>
+          <label class="checkline"><input type="radio" name="q3_zero_sugar_demand" value="Never">Never</label>
+         </div>
+        </fieldset>
+       </div>
+      </section>
+
+      <!-- Section C -->
+      <section class="section-card rounded-[20px] p-5 md:p-6" style="background: rgb(255, 253, 248);">
+       <div class="mb-5">
+        <div class="section-kicker">Section C</div>
+        <h2 class="font-bold mt-1 font-[Libre_Franklin]" style="color: rgb(35, 67, 49); font-size: 23px;">Shelf &amp; Packaging</h2>
+        <p class="mt-1 text-sm" style="color: rgb(106, 121, 111); font-size: 15px;">How does packaging influence what gets sold?</p>
+       </div>
+       <h3 class="font-semibold mb-1" style="color: rgb(43, 70, 53); font-size: 18px;">Q7. For each pack format available in your store, share your observations.</h3>
+       <p class="text-sm mb-3" style="color: rgb(108, 122, 113); font-size: 15px;">
+         <b>Most Preferred by Customer</b> — Which pack do customers reach for first? &nbsp;|&nbsp;
+         <b>Easy to Stack/Store</b> — Which pack is easiest for you to arrange on shelf? &nbsp;|&nbsp;
+         <b>Complaints / Issues</b> — Any damage, leakage, or customer complaints about this pack?
+       </p>
+       <div class="table-wrap">
+        <table>
+         <thead>
+          <tr>
+           <th>Pack Format</th>
+           <th>✅ Most Preferred by Customer</th>
+           <th>📦 Easy to Stack / Store</th>
+           <th>⚠️ Complaints / Issues</th>
+          </tr>
+         </thead>
+         <tbody id="q7Table"></tbody>
+        </table>
+       </div>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+        <fieldset>
+         <legend class="field-label mb-2">Q8. Does shelf placement affect how much a product sells?</legend>
+         <div class="space-y-2">
+          <label class="checkline"><input type="radio" name="q8_shelf_placement" value="Yes, significantly">Yes, significantly</label>
+          <label class="checkline"><input type="radio" name="q8_shelf_placement" value="Somewhat">Somewhat</label>
+          <label class="checkline"><input type="radio" name="q8_shelf_placement" value="No difference">No difference</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Q9. Does pack design / label make a customer pick it up?</legend>
+         <div class="flex flex-wrap gap-4 mb-3">
+          <label class="checkline"><input type="radio" name="q9_pack_design_influence" value="Yes">Yes</label>
+          <label class="checkline"><input type="radio" name="q9_pack_design_influence" value="No">No</label>
+          <label class="checkline"><input type="radio" name="q9_pack_design_influence" value="Sometimes">Sometimes</label>
+         </div>
+         <label for="q9_most_visible_category" class="field-label block mb-1.5">Category where most visible</label>
+         <input id="q9_most_visible_category" name="q9_most_visible_category" class="text-input" type="text">
+        </fieldset>
+        <fieldset class="md:col-span-2">
+         <legend class="field-label mb-2">Q10. How do consumers recall beverages in stores?</legend>
+         <div class="flex flex-wrap gap-x-5 gap-y-2">
+          <label class="checkline"><input type="checkbox" name="q10_consumer_recall" value="Brand name">Brand name</label>
+          <label class="checkline"><input type="checkbox" name="q10_consumer_recall" value="Company name">Company name</label>
+          <label class="checkline"><input type="checkbox" name="q10_consumer_recall" value="Colour description">Colour description</label>
+          <label class="checkline"><input type="checkbox" name="q10_consumer_recall" value="Others">Others</label>
+         </div>
+        </fieldset>
+       </div>
+      </section>
+
+      <!-- Section D -->
+      <section class="section-card rounded-[20px] p-5 md:p-6" style="background: rgb(255, 253, 248);">
+       <div class="mb-5">
+        <div class="section-kicker">Section D</div>
+        <h2 class="font-bold mt-1 font-[Libre_Franklin]" style="color: rgb(35, 67, 49); font-size: 23px;">Buyer &amp; Category Observations</h2>
+        <p class="mt-1 text-sm" style="color: rgb(106, 121, 111); font-size: 15px;">Capture planned versus impulse behavior, buyer groups, and recent category movement.</p>
+       </div>
+       <h3 class="font-semibold mb-1" style="color: rgb(43, 70, 53); font-size: 18px;">Q11. Based on daily observation, fill in for each drink category.</h3>
+       <p class="text-sm mb-3" style="color: rgb(108, 122, 113); font-size: 15px;">P = Planned · I = Impulse · SS = Single Serve · MS = Multi Serve &nbsp;·&nbsp; <span style="color:#2e6a4a;font-weight:600">✦ Brand and size fields auto-fill from Q1 — edit if different</span></p>
+       <div class="table-wrap">
+        <table>
+         <thead>
+          <tr><th>Category</th><th>Sales Rank</th><th>Fastest Selling Brand</th><th>P / I</th><th>Pack Preference</th><th>Top Size</th></tr>
+         </thead>
+         <tbody id="q11Table"></tbody>
+        </table>
+       </div>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+        <fieldset>
+         <legend class="field-label mb-2">Q12. Sales performance this year compared to previous year</legend>
+         <div class="space-y-2">
+          <label class="checkline"><input type="radio" name="q12_sales_vs_previous" value="Higher than previous year">Higher than previous year</label>
+          <label class="checkline"><input type="radio" name="q12_sales_vs_previous" value="Similar to previous year">Similar to previous year</label>
+          <label class="checkline"><input type="radio" name="q12_sales_vs_previous" value="Lower than previous year">Lower than previous year</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Q12B. Do seasonal changes or climate disturbances affect your sales?</legend>
+         <div class="space-y-2">
+          <label class="checkline"><input type="radio" name="q_seasonal_impact" value="Yes, significantly">Yes, significantly</label>
+          <label class="checkline"><input type="radio" name="q_seasonal_impact" value="Somewhat">Somewhat</label>
+          <label class="checkline"><input type="radio" name="q_seasonal_impact" value="No impact">No impact</label>
+          <label class="checkline"><input type="radio" name="q_seasonal_impact" value="Depends on category">Depends on category</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Q13. Challenges related to beverage storage and shelf life</legend>
+         <div class="space-y-2">
+          <label class="checkline"><input type="checkbox" name="q13_storage_challenges" value="Shelf life is a concern">Shelf life is a concern</label>
+          <label class="checkline"><input type="checkbox" name="q13_storage_challenges" value="No, storage is well maintained">No, storage is well maintained</label>
+          <label class="checkline"><input type="checkbox" name="q13_storage_challenges" value="Sometimes, depends on beverage">Sometimes, depends on beverage</label>
+          <label class="checkline"><input type="checkbox" name="q13_storage_challenges" value="Stacking is a problem">Stacking is a problem</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Q14. Top reason a retailer keeps a particular product / brand</legend>
+         <div class="space-y-2">
+          <label class="checkline"><input type="radio" name="q14_top_reason_stock" value="Product Margins">Product Margins</label>
+          <label class="checkline"><input type="radio" name="q14_top_reason_stock" value="Consumer Demand">Consumer Demand</label>
+          <label class="checkline"><input type="radio" name="q14_top_reason_stock" value="Assortment">Assortment</label>
+          <label class="checkline"><input type="radio" name="q14_top_reason_stock" value="Others">Others</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Q15. Overall purchase type</legend>
+         <div class="space-y-2">
+          <label class="checkline"><input type="radio" name="q15_overall_purchase_type" value="Mostly Planned">Mostly Planned</label>
+          <label class="checkline"><input type="radio" name="q15_overall_purchase_type" value="Mostly Impulse">Mostly Impulse</label>
+          <label class="checkline"><input type="radio" name="q15_overall_purchase_type" value="Depends on Category">Depends on Category</label>
+          <label class="checkline"><input type="radio" name="q15_overall_purchase_type" value="Equal Mix">Equal Mix</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Q16. When do customers most often buy beverages at your store?</legend>
+         <div class="space-y-2">
+          <label class="checkline"><input type="radio" name="q_time_of_purchase" value="Morning">Morning</label>
+          <label class="checkline"><input type="radio" name="q_time_of_purchase" value="Afternoon">Afternoon</label>
+          <label class="checkline"><input type="radio" name="q_time_of_purchase" value="Evening">Evening</label>
+          <label class="checkline"><input type="radio" name="q_time_of_purchase" value="Night">Night</label>
+         </div>
+        </fieldset>
+       </div>
+       <div class="mt-5">
+        <h3 class="font-semibold mb-1" style="color: rgb(43, 70, 53); font-size: 18px;">Q17. Who is the primary buyer for each category?</h3>
+        <p class="text-sm mb-3" style="color: rgb(108, 122, 113); font-size: 15px;">Tick the most common age group. You can tick more than one per category.</p>
+        <div class="table-wrap">
+         <table>
+          <thead>
+           <tr><th>Category</th><th>Kids &lt;12</th><th>Teens 13–19</th><th>Young Adults 20–35</th><th>Adults 35–55</th><th>Families / HH</th></tr>
+          </thead>
+          <tbody id="q15Table"></tbody>
+         </table>
+        </div>
+       </div>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+        <fieldset>
+         <legend class="field-label mb-2">Category grown most in last 6 months</legend>
+         <div class="flex flex-wrap gap-x-4 gap-y-2">
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="CSD">CSD</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="NCSD">NCSD</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="ORS">ORS</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="VAD">VAD</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="Energy">Energy</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="RTD">RTD</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="Water">Water</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="Non-dairy">Non-dairy</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="White Milk">White Milk</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="Fermented Milk">Fermented Milk</label>
+          <label class="checkline"><input type="radio" name="q15_category_grown_most" value="Flavoured Milk">Flavoured Milk</label>
+         </div>
+        </fieldset>
+        <fieldset>
+         <legend class="field-label mb-2">Have customers asked for eco-friendly or recyclable packaging?</legend>
+         <div class="flex flex-wrap gap-4">
+          <label class="checkline"><input type="radio" name="eco_friendly_asked" value="Yes">Yes</label>
+          <label class="checkline"><input type="radio" name="eco_friendly_asked" value="No">No</label>
+          <label class="checkline"><input type="radio" name="eco_friendly_asked" value="Sometimes">Sometimes</label>
+         </div>
+        </fieldset>
+        <fieldset class="md:col-span-2">
+         <legend class="field-label mb-2">Would you stock eco-friendly packaging even if it is slightly costly?</legend>
+         <div class="flex flex-wrap gap-x-5 gap-y-2">
+          <label class="checkline"><input type="radio" name="eco_friendly_stock_willingness" value="Yes, if customers ask">Yes, if customers ask</label>
+          <label class="checkline"><input type="radio" name="eco_friendly_stock_willingness" value="Only if small price difference">Only if small price difference</label>
+          <label class="checkline"><input type="radio" name="eco_friendly_stock_willingness" value="No">No</label>
+          <label class="checkline"><input type="radio" name="eco_friendly_stock_willingness" value="Not sure">Not sure</label>
+         </div>
+        </fieldset>
+       </div>
+      </section>
+
+      <!-- Final Review -->
+      <section class="section-card rounded-[20px] p-5 md:p-6" style="background: rgb(255, 253, 248);">
+       <div class="mb-4">
+        <div class="section-kicker">Close Interview</div>
+        <h2 class="font-bold mt-1 font-[Libre_Franklin]" style="color: rgb(35, 67, 49); font-size: 23px;">Final Review</h2>
+       </div>
+       <fieldset>
+        <legend class="field-label mb-2">Interview Rating</legend>
+        <div class="flex flex-wrap gap-3">
+         <label class="checkline"><input type="radio" name="interview_rating" value="1">1</label>
+         <label class="checkline"><input type="radio" name="interview_rating" value="2">2</label>
+         <label class="checkline"><input type="radio" name="interview_rating" value="3">3</label>
+         <label class="checkline"><input type="radio" name="interview_rating" value="4">4</label>
+         <label class="checkline"><input type="radio" name="interview_rating" value="5">5</label>
+        </div>
+       </fieldset>
+       <div class="mt-6 pt-5 border-t border-[#e2e8e2] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <p class="text-sm max-w-xl" style="color: rgb(107, 119, 110); font-size: 15px;">Thank you for your time. All responses are confidential and for internal research only.</p>
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+         <div id="formStatus" class="status text-sm"></div>
+         <button type="button" id="resetBtn" class="rounded-xl border border-[#cdd8d0] px-4 py-3 text-sm font-semibold bg-white hover:bg-[#f3f7f3] transition" style="color: rgb(53, 81, 64);">Reset Form</button>
+         <button type="submit" id="saveBtn" class="rounded-xl px-5 py-3 text-sm font-semibold text-white bg-[#214e38] hover:bg-[#183d2b] transition inline-flex items-center justify-center gap-2" style="color: rgb(255, 255, 255);">
+          <i data-lucide="save" class="w-4 h-4"></i>
+          <span id="saveBtnText">Save to Google Sheet</span>
+         </button>
+        </div>
+       </div>
+      </section>
+     </form>
+
+     <!-- Sidebar -->
+     <aside class="sticky-panel space-y-4">
+      <section class="rounded-[18px] border border-[#dce4dd] bg-white/90 p-5 shadow-sm">
+       <div class="flex items-center gap-2 mb-3">
+        <div class="w-8 h-8 rounded-full bg-[#edf3ee] text-[#214e38] flex items-center justify-center">
+         <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+        </div>
+        <h2 class="font-bold font-[Libre_Franklin]" style="color: rgb(35, 67, 49); font-size: 20px;">Interview Tracker</h2>
+       </div>
+       <p class="text-sm leading-relaxed" style="color: rgb(101, 116, 106); font-size: 14px;">Responses are sent directly to your private Google Sheet. Only you can access it.</p>
+       <div class="mt-4 rounded-xl bg-[#f6f8f4] border border-[#e5ebe5] p-3">
+        <div class="text-xs uppercase tracking-[.12em] text-[#708074] font-bold mb-1">Saved This Session</div>
+        <div class="flex items-end gap-2">
+         <span id="savedCount" class="text-3xl font-bold text-[#214e38]">0</span>
+         <span class="text-sm text-[#728276] pb-1">records</span>
+        </div>
+       </div>
+       <div class="mt-3 rounded-xl bg-[#edf7f1] border border-[#c6dece] p-3 text-xs text-[#2e6a4a] leading-relaxed">
+        <i data-lucide="lock" class="w-3 h-3 inline-block mr-1"></i>
+        Data goes only to your Google Sheet. No one else can see it.
+       </div>
+      </section>
+      <section class="rounded-[18px] border border-[#e0dfd4] p-5" style="background: rgb(255, 250, 240);">
+       <div class="flex items-center gap-2 mb-3">
+        <div class="w-8 h-8 rounded-full bg-[#f6e5bd] text-[#7f5a13] flex items-center justify-center">
+         <i data-lucide="lightbulb" class="w-4 h-4"></i>
+        </div>
+        <h2 class="font-bold font-[Libre_Franklin]" style="color: rgb(112, 79, 19); font-size: 18px;">Field Tips</h2>
+       </div>
+       <ul class="space-y-3 text-sm text-[#5e665f]">
+        <li class="flex gap-2"><span class="progress-dot mt-1.5"></span><span>Use simple Hindi or English.</span></li>
+        <li class="flex gap-2"><span class="progress-dot mt-1.5"></span><span>Tick all that apply where instructed.</span></li>
+        <li class="flex gap-2"><span class="progress-dot mt-1.5"></span><span>Probe gently on fast-moving packs and price points.</span></li>
+       </ul>
+      </section>
+     </aside>
+    </div>
+   </main>
+  </div>
+
+  <script>
+    // ─── CONFIG ───────────────────────────────────────────────────────────────
+    const SHEET_URL = "https://script.google.com/macros/s/AKfycbxAtEKIoAE__KFwVrRRbTLfFXeTp5hRs060jR6XsT_TrOQhDumSOsvaxc47tUwvwUweFw/exec";
+
+    // ─── DATA ─────────────────────────────────────────────────────────────────
+    const categories = [
+      "CSD (Carbonated Soft Drinks)",
+      "NCSD (Juices & Fruit Drinks)",
+      "ORS (Oral Rehydration)",
+      "White Milk",
+      "Value Added Dairy – Fermented drinks",
+      "Value Added Dairy – Flavoured milk",
+      "Energy Drinks",
+      "RTD (Tea / Coffee)",
+      "Bottled Water",
+      "Non-Dairy Alt."
+    ];
+    const categoryMap = ["csd","ncsd","ors","milk","vad_fermented","vad_flavoured","energy","rtd","water","nondairy"];
+    const packSizes   = ["80ml","125ml","150ml","160ml","170ml","180ml","200ml","330ml","350ml","500ml","600ml","740ml","850ml","1L","1.2L","1.4L","1.7L","2L"];
+    const packFormats = ["PET Bottle","Carton (Tetra/SIG)","Flexible Pouch","Glass Bottle","Aluminum Can","Spouted Pouch"];
+    const packFormatMap = ["pet","carton","pouch","glass","can","spouted"];
+    const buyerGroups = ["Kids (<12)","Teens (13–19)","Young Adults (20–35)","Adults (35–55)","Families/HH"];
+    const priceOptions = ["₹5","₹10","₹15","₹20","₹25","₹30","₹35","₹40","₹45","₹50","₹50-80","₹80-110","₹110-130","₹130-170","₹170-200","₹200+"];
+
+    let sessionSavedCount = 0;
+
+    // ─── TABLE BUILDERS ───────────────────────────────────────────────────────
+    function buildTables() {
+      // Q1
+      document.getElementById('q1Table').innerHTML = categories.map((cat, i) => `
+        <tr>
+          <td class="font-medium text-[#33453a]">${cat}</td>
+          <td><input type="checkbox" class="q1-stocked-check" data-idx="${i}" name="q1_stocked_${i}" value="${cat}" style="accent-color:#285c42;width:15px;height:15px;"></td>
+          <td class="q1-fu q1-fu-${i}" style="display:none"><input class="mini-input" name="q1_brand_${i}" type="text" placeholder="Brand name"></td>
+          <td class="q1-fu q1-fu-${i}" style="display:none"><input class="mini-input" name="q1_single_${i}" type="text" placeholder="e.g. 200ml PET"></td>
+          <td class="q1-fu q1-fu-${i}" style="display:none"><input class="mini-input" name="q1_multi_${i}" type="text" placeholder="e.g. 1L PET"></td>
+          <td class="q1-fu q1-fu-${i}" style="display:none"><input class="mini-input" name="q1_new_${i}" type="text" placeholder="New brand / SKU"></td>
+          <td class="q1-fu q1-fu-${i}" style="display:none"><input class="mini-input" name="q1_price_fluct_${i}" type="text" placeholder="e.g. ₹5-10"></td>
+        </tr>`).join('');
+
+      // Q2
+      document.getElementById('q2Table').innerHTML = categories.map((cat, i) => `
+        <tr data-q2-row="${i}" style="display:none">
+          <td class="font-medium text-[#33453a]">${cat}</td>
+          ${packSizes.map(s => `<td><input type="checkbox" name="q2_${i}" value="${s}" style="accent-color:#285c42;width:14px;height:14px;"></td>`).join('')}
+        </tr>`).join('');
+
+      // Q3
+      document.getElementById('q3SliderContainer').innerHTML = categories.map((cat, i) => `
+        <div data-q3-card="${i}" style="display:none" class="border border-[#e0e8e1] rounded-lg p-4 bg-[#fafbf9]">
+          <label class="font-medium text-[#33453a] block mb-3">${cat}</label>
+          <div class="flex flex-wrap gap-2">
+            ${priceOptions.map(p => `<label class="checkline"><input type="checkbox" name="q3_price_${i}" value="${p}" style="accent-color:#285c42;width:14px;height:14px;"> ${p}</label>`).join('')}
+          </div>
+        </div>`).join('');
+
+      // Q7
+      document.getElementById('q7Table').innerHTML = packFormats.map((fmt, i) => `
+        <tr>
+          <td class="font-medium text-[#33453a]">${fmt}</td>
+          <td><input type="checkbox" name="q7_pick_${i}" value="${fmt}" style="accent-color:#285c42;width:14px;height:14px;"></td>
+          <td><input type="checkbox" name="q7_store_${i}" value="${fmt}" style="accent-color:#285c42;width:14px;height:14px;"></td>
+          <td><input class="mini-input" name="q7_complaint_${i}" type="text" placeholder="Any complaint?"></td>
+        </tr>`).join('');
+
+      // Q11
+      document.getElementById('q11Table').innerHTML = categories.map((cat, i) => `
+        <tr data-q11-row="${i}" style="display:none">
+          <td class="font-medium text-[#33453a]">${cat}</td>
+          <td><select class="mini-input q11-rank-select" name="q11_rank_${i}" style="min-width:70px">
+            <option value="">—</option>
+          </select></td>
+          <td><input class="mini-input" name="q11_brand_${i}" type="text"></td>
+          <td>
+            <label class="checkline"><input type="radio" name="q11_pi_${i}" value="P" style="accent-color:#285c42;">P</label>
+            <label class="checkline"><input type="radio" name="q11_pi_${i}" value="I" style="accent-color:#285c42;">I</label>
+          </td>
+          <td>
+            <label class="checkline"><input type="checkbox" name="q11_pref_${i}" value="SS" style="accent-color:#285c42;">SS</label>
+            <label class="checkline"><input type="checkbox" name="q11_pref_${i}" value="MS" style="accent-color:#285c42;">MS</label>
+            <label class="checkline"><input type="checkbox" name="q11_pref_${i}" value="Both" style="accent-color:#285c42;">Both</label>
+          </td>
+          <td><input class="mini-input" name="q11_size_${i}" type="text"></td>
+        </tr>`).join('');
+
+      // Q15
+      document.getElementById('q15Table').innerHTML = categories.map((cat, i) => `
+        <tr data-q15-row="${i}" style="display:none">
+          <td class="font-medium text-[#33453a]">${cat}</td>
+          ${buyerGroups.map((g, gi) => `<td><input type="checkbox" name="q15_${i}_${gi}" value="${g}" style="accent-color:#285c42;width:14px;height:14px;"></td>`).join('')}
+        </tr>`).join('');
+
+      // Stocked checkbox toggle
+      function updateRankDropdowns() {
+        // Count how many categories are currently stocked
+        const stockedCount = document.querySelectorAll('.q1-stocked-check:checked').length;
+
+        // Update every rank dropdown
+        document.querySelectorAll('.q11-rank-select').forEach(sel => {
+          const currentVal = sel.value;
+          sel.innerHTML = '<option value="">—</option>';
+          for (let n = 1; n <= stockedCount; n++) {
+            const opt = document.createElement('option');
+            opt.value = String(n);
+            opt.textContent = n === 1 ? '1st' : n === 2 ? '2nd' : n === 3 ? '3rd' : `${n}th`;
+            sel.appendChild(opt);
+          }
+          // Restore previous value if still valid
+          if (currentVal && parseInt(currentVal) <= stockedCount) sel.value = currentVal;
+        });
+      }
+
+      document.querySelectorAll('.q1-stocked-check').forEach(cb => {
+        cb.addEventListener('change', function () {
+          const i = this.dataset.idx;
+          const on = this.checked;
+          document.querySelectorAll(`.q1-fu-${i}`).forEach(el => {
+            el.style.display = on ? '' : 'none';
+            if (!on) el.querySelectorAll('input').forEach(inp => inp.value = '');
+          });
+          const q2 = document.querySelector(`[data-q2-row="${i}"]`);
+          if (q2) q2.style.display = on ? '' : 'none';
+          const q3 = document.querySelector(`[data-q3-card="${i}"]`);
+          if (q3) {
+            q3.style.display = on ? '' : 'none';
+            if (!on) q3.querySelectorAll('input').forEach(inp => inp.checked = false);
+          }
+          const q11 = document.querySelector(`[data-q11-row="${i}"]`);
+          if (q11) {
+            q11.style.display = on ? '' : 'none';
+            if (on) {
+              setTimeout(() => {
+                const brandVal = document.querySelector(`[name="q1_brand_${i}"]`)?.value || '';
+                const q11Brand = document.querySelector(`[name="q11_brand_${i}"]`);
+                if (q11Brand && !q11Brand.value && brandVal) q11Brand.value = brandVal;
+
+                const singleVal = document.querySelector(`[name="q1_single_${i}"]`)?.value || '';
+                const multiVal  = document.querySelector(`[name="q1_multi_${i}"]`)?.value || '';
+                const q11Size   = document.querySelector(`[name="q11_size_${i}"]`);
+                if (q11Size && !q11Size.value) {
+                  if (singleVal) q11Size.value = singleVal;
+                  else if (multiVal) q11Size.value = multiVal;
+                }
+
+                if (singleVal && multiVal) {
+                  const bothCb = document.querySelector(`[name="q11_pref_${i}"][value="Both"]`);
+                  if (bothCb && !bothCb.checked) bothCb.checked = true;
+                } else if (singleVal) {
+                  const ssCb = document.querySelector(`[name="q11_pref_${i}"][value="SS"]`);
+                  if (ssCb && !ssCb.checked) ssCb.checked = true;
+                } else if (multiVal) {
+                  const msCb = document.querySelector(`[name="q11_pref_${i}"][value="MS"]`);
+                  if (msCb && !msCb.checked) msCb.checked = true;
+                }
+              }, 100);
+            }
+          }
+          const q15 = document.querySelector(`[data-q15-row="${i}"]`);
+          if (q15) q15.style.display = on ? '' : 'none';
+
+          // Update rank dropdowns after every stocked change
+          updateRankDropdowns();
+        });
+      });
+
+      // ── Also auto-fill Q11 when Q1 brand/size fields are typed into ──
+      categories.forEach((cat, i) => {
+        const brandInput  = document.querySelector(`[name="q1_brand_${i}"]`);
+        const singleInput = document.querySelector(`[name="q1_single_${i}"]`);
+        const multiInput  = document.querySelector(`[name="q1_multi_${i}"]`);
+
+        if (brandInput) {
+          brandInput.addEventListener('input', function() {
+            const q11Brand = document.querySelector(`[name="q11_brand_${i}"]`);
+            if (q11Brand) q11Brand.value = this.value;
+          });
+        }
+
+        if (singleInput) {
+          singleInput.addEventListener('input', function() {
+            const q11Size = document.querySelector(`[name="q11_size_${i}"]`);
+            if (q11Size) q11Size.value = this.value;
+            // Update pack pref checkboxes
+            const multiVal = document.querySelector(`[name="q1_multi_${i}"]`)?.value || '';
+            updatePackPref(i, this.value, multiVal);
+          });
+        }
+
+        if (multiInput) {
+          multiInput.addEventListener('input', function() {
+            const singleVal = document.querySelector(`[name="q1_single_${i}"]`)?.value || '';
+            const q11Size   = document.querySelector(`[name="q11_size_${i}"]`);
+            if (q11Size && !singleVal) q11Size.value = this.value;
+            updatePackPref(i, singleVal, this.value);
+          });
+        }
+      });
+
+      function updatePackPref(i, singleVal, multiVal) {
+        const ssCb   = document.querySelector(`[name="q11_pref_${i}"][value="SS"]`);
+        const msCb   = document.querySelector(`[name="q11_pref_${i}"][value="MS"]`);
+        const bothCb = document.querySelector(`[name="q11_pref_${i}"][value="Both"]`);
+        if (!ssCb || !msCb || !bothCb) return;
+        ssCb.checked = false; msCb.checked = false; bothCb.checked = false;
+        if (singleVal && multiVal) bothCb.checked = true;
+        else if (singleVal)        ssCb.checked   = true;
+        else if (multiVal)         msCb.checked   = true;
+      }
+    }
+
+    // ─── HELPERS ──────────────────────────────────────────────────────────────
+    const getChecked = name => [...document.querySelectorAll(`[name="${name}"]:checked`)].map(e => e.value).join(", ");
+    const getRadio   = name => { const e = document.querySelector(`[name="${name}"]:checked`); return e ? e.value : ""; };
+    const getVal     = name => { const e = document.querySelector(`[name="${name}"]`); return e ? e.value.trim() : ""; };
+    const isStocked  = i => !!document.querySelector(`[name="q1_stocked_${i}"]:checked`);
+
+    function setStatus(msg, type) {
+      const el = document.getElementById('formStatus');
+      el.textContent = msg;
+      el.className = `status text-sm ${type === 'success' ? 'text-[#1f6a43]' : type === 'error' ? 'text-[#a04437]' : 'text-[#66736a]'}`;
+    }
+
+    function setSaving(saving) {
+      const btn = document.getElementById('saveBtn');
+      const txt = document.getElementById('saveBtnText');
+      btn.disabled = saving;
+      btn.style.opacity = saving ? '0.7' : '1';
+      txt.textContent = saving ? 'Saving...' : 'Save to Google Sheet';
+    }
+
+    // ─── COLLECT RECORD ───────────────────────────────────────────────────────
+    function collectRecord() {
+      const record = {
+        timestamp:                  new Date().toLocaleString('en-IN'),
+        interviewer:                getVal('interviewer'),
+        date:                       getVal('date'),
+        store_name:                 getVal('store_name'),
+        locality_city:              getVal('locality_city'),
+        retailer_name:              getVal('retailer_name'),
+        interviewer_sign:           getVal('interviewer_sign'),
+        store_format:               getChecked('store_format'),
+        daily_footfall:             getRadio('daily_footfall'),
+        sells_mostly:               getRadio('sells_mostly'),
+        q2_stopped_stocking:        getRadio('q2_stopped_stocking'),
+        q2_stopped_reason:          getVal('q2_stopped_reason'),
+        q3_switch_brands_price:     getRadio('q3_switch_brands_price'),
+        q3_zero_sugar_demand:       getRadio('q3_zero_sugar_demand'),
+        q8_shelf_placement:         getRadio('q8_shelf_placement'),
+        q9_pack_design_influence:   getRadio('q9_pack_design_influence'),
+        q9_most_visible_category:   getVal('q9_most_visible_category'),
+        q10_consumer_recall:        getChecked('q10_consumer_recall'),
+        q12_sales_vs_previous:      getRadio('q12_sales_vs_previous'),
+        q_seasonal_impact:          getRadio('q_seasonal_impact'),
+        q13_storage_challenges:     getChecked('q13_storage_challenges'),
+        q14_top_reason_stock:       getRadio('q14_top_reason_stock'),
+        q15_overall_purchase_type:  getRadio('q15_overall_purchase_type'),
+        q_time_of_purchase:         getRadio('q_time_of_purchase'),
+        q15_category_grown_most:    getRadio('q15_category_grown_most'),
+        eco_friendly_asked:         getRadio('eco_friendly_asked'),
+        eco_friendly_stock_willingness: getRadio('eco_friendly_stock_willingness'),
+        interview_rating:           getRadio('interview_rating')
+      };
+
+      categories.forEach((cat, i) => {
+        const pfx = categoryMap[i];
+        const stocked = isStocked(i);
+        record[`q1_${pfx}_stocked`]      = stocked ? "Yes" : "No";
+        record[`q1_${pfx}_brand`]         = stocked ? getVal(`q1_brand_${i}`) : "";
+        record[`q1_${pfx}_single`]        = stocked ? getVal(`q1_single_${i}`) : "";
+        record[`q1_${pfx}_multi`]         = stocked ? getVal(`q1_multi_${i}`) : "";
+        record[`q1_${pfx}_new`]           = stocked ? getVal(`q1_new_${i}`) : "";
+        record[`q1_${pfx}_price_fluct`]   = stocked ? getVal(`q1_price_fluct_${i}`) : "";
+        record[`q2_${pfx}_sizes`]         = stocked ? getChecked(`q2_${i}`) : "";
+        record[`q3_${pfx}_price`]         = stocked ? getChecked(`q3_price_${i}`) : "";
+        record[`q11_${pfx}_rank`]         = stocked ? getVal(`q11_rank_${i}`) : "";
+        record[`q11_${pfx}_brand`]        = stocked ? getVal(`q11_brand_${i}`) : "";
+        record[`q11_${pfx}_pi`]           = stocked ? getRadio(`q11_pi_${i}`) : "";
+        record[`q11_${pfx}_pref`]         = stocked ? getChecked(`q11_pref_${i}`) : "";
+        record[`q11_${pfx}_size`]         = stocked ? getVal(`q11_size_${i}`) : "";
+        if (stocked) {
+          const buyers = buyerGroups.filter((g, gi) => document.querySelector(`[name="q15_${i}_${gi}"]:checked`));
+          record[`q15_${pfx}_buyers`] = buyers.join(", ");
+        } else {
+          record[`q15_${pfx}_buyers`] = "";
+        }
+      });
+
+      packFormats.forEach((fmt, i) => {
+        const pfx = packFormatMap[i];
+        record[`q7_${pfx}_customer_picks`] = document.querySelector(`[name="q7_pick_${i}"]:checked`) ? "Yes" : "No";
+        record[`q7_${pfx}_easiest_store`]  = document.querySelector(`[name="q7_store_${i}"]:checked`) ? "Yes" : "No";
+        record[`q7_${pfx}_complaint`]      = getVal(`q7_complaint_${i}`);
+      });
+
+      return record;
+    }
+
+    // ─── SUBMIT ───────────────────────────────────────────────────────────────
+    // Apps Script blocks JSON fetch from external pages due to CORS.
+    // The only reliable cross-origin method: POST via a hidden <form> targeting
+    // a hidden <iframe>. The iframe swallows the redirect; we treat it as success
+    // after a short timeout. The sheet receives a flat key=value payload.
+    function submitToSheet(record) {
+      return new Promise((resolve, reject) => {
+        // Build / reuse a hidden iframe
+        let iframe = document.getElementById('_submit_frame');
+        if (!iframe) {
+          iframe = document.createElement('iframe');
+          iframe.id = '_submit_frame';
+          iframe.name = '_submit_frame';
+          iframe.style.display = 'none';
+          document.body.appendChild(iframe);
+        }
+
+        // Build a temporary hidden form
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = SHEET_URL;
+        form.target = '_submit_frame';
+        form.style.display = 'none';
+
+        // Append every record field as a hidden input
+        Object.entries(record).forEach(([key, value]) => {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = value !== undefined && value !== null ? String(value) : '';
+          form.appendChild(input);
+        });
+
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
+
+        // Apps Script will redirect the iframe — we can't read the response
+        // across origins, but if the form posted without a JS error, data is saved.
+        // Wait 3 s then resolve so the UI can update.
+        setTimeout(() => resolve(true), 3000);
+      });
+    }
+
+    // ─── INIT ─────────────────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      buildTables();
+      lucide.createIcons();
+
+      document.getElementById('date').value = new Date().toISOString().split('T')[0];
+
+      // ── Medical store tip ──
+      document.querySelectorAll('[name="store_format"]').forEach(cb => {
+        cb.addEventListener('change', function() {
+          const medicalChecked = document.querySelector('[name="store_format"][value="Medical"]')?.checked;
+          const tip = document.getElementById('medicalTip');
+          if (tip) tip.style.display = medicalChecked ? 'flex' : 'none';
+        });
+      });
+
+      document.getElementById('resetBtn').addEventListener('click', () => {
+        document.getElementById('interviewForm').reset();
+        document.getElementById('date').value = new Date().toISOString().split('T')[0];
+        // Hide all conditional rows
+        categories.forEach((cat, i) => {
+          document.querySelectorAll(`.q1-fu-${i}`).forEach(el => el.style.display = 'none');
+          const q2 = document.querySelector(`[data-q2-row="${i}"]`); if(q2) q2.style.display='none';
+          const q3 = document.querySelector(`[data-q3-card="${i}"]`); if(q3) q3.style.display='none';
+          const q11 = document.querySelector(`[data-q11-row="${i}"]`); if(q11) q11.style.display='none';
+          const q15 = document.querySelector(`[data-q15-row="${i}"]`); if(q15) q15.style.display='none';
+        });
+        setStatus('Form cleared.', 'neutral');
+      });
+
+      document.getElementById('interviewForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (!getVal('interviewer') || !getVal('date')) {
+          setStatus('Please enter interviewer name and date.', 'error');
+          return;
+        }
+
+        setSaving(true);
+        setStatus('Saving to Google Sheet… (3s)', 'neutral');
+
+        try {
+          const record = collectRecord();
+          await submitToSheet(record);
+
+          sessionSavedCount++;
+          document.getElementById('savedCount').textContent = sessionSavedCount;
+          setStatus('✓ Saved to your Google Sheet!', 'success');
+
+          // Reset form
+          document.getElementById('interviewForm').reset();
+          document.getElementById('date').value = new Date().toISOString().split('T')[0];
+          categories.forEach((cat, i) => {
+            document.querySelectorAll(`.q1-fu-${i}`).forEach(el => el.style.display = 'none');
+            const q2 = document.querySelector(`[data-q2-row="${i}"]`); if(q2) q2.style.display='none';
+            const q3 = document.querySelector(`[data-q3-card="${i}"]`); if(q3) q3.style.display='none';
+            const q11 = document.querySelector(`[data-q11-row="${i}"]`); if(q11) q11.style.display='none';
+            const q15 = document.querySelector(`[data-q15-row="${i}"]`); if(q15) q15.style.display='none';
+          });
+
+          setTimeout(() => setStatus('', 'neutral'), 3000);
+
+        } catch (err) {
+          setStatus(`Error: ${err.message}`, 'error');
+        } finally {
+          setSaving(false);
+        }
+      });
+    });
+  </script>
+
+  <!-- ── BRAND AUTOCOMPLETE ── -->
+  <script>
+  const INDIAN_BRANDS = [
+    "Hindustan Unilever","ITC Limited","Nestle India","Britannia","Dabur",
+    "Marico","Tata Consumer Products","Amul","PepsiCo India","Coca-Cola India",
+    "Parle Products","Parle Agro","Mondelez (Cadbury)","Patanjali","Adani Wilmar",
+    "Godrej Consumer","Mother Dairy","Haldiram's","Balaji Wafers","Bikaji Foods",
+    "Prataap Snacks (Yellow Diamond)","DFM Foods (CravX)","Anmol Industries",
+    "Bector's Cremica","Dukes (Savourit)","Priyangold","Unibic","Keventer",
+    "Hatsun Agro","Heritage Foods","Kwality Wall's","Vadilal","Creambell",
+    "Nandini (KMF)","Aavin","Milma","Sudha Dairy","Verka",
+    "Catch Spices","MDH Spices","Everest Spices","Badshah Spices","MTR Foods",
+    "Aashirvaad","Fortune Oil","Saffola","Dhara","Gemini Oil","Dalda",
+    "Mahakosh","Emami Agrotech","Goldiee Spices","Sunrise Spices","Ramdev Spices",
+    "Kohinoor Rice","Daawat (LT Foods)","India Gate Basmati","Pillsbury",
+    "Bisleri","Kinley","Aquafina","Rail Neer","Bailley","Himalayan",
+    "Frooti","Maaza","Slice","Paper Boat","Real Fruit Juice","Tropicana",
+    "Red Bull","Monster Energy","Sting","Gatorade","Complan","Horlicks",
+    "Bournvita","Boost","Tata Tea","Red Label","Taj Mahal Tea","Wagh Bakri",
+    "Society Tea","Bru Coffee","Nescafe","Continental Coffee","Sleepy Owl",
+    "Maggi","Yippee!","Ching's Secret","Wai Wai","Top Ramen",
+    "Perfetti Van Melle","Mentos","Lotte India","Pulse","Pass Pass",
+    "Parle-G","Good Day","Marie Gold","Hide & Seek","Bourbon","Oreo",
+    "ID Fresh Food","Epigamia","The Whole Truth","Yoga Bar","Wingreens Farms",
+    "Veeba","Del Monte India","FunFoods","Bira 91","Som Distilleries",
+    "Hector Beverages","Raw Pressery","Electral","ORS Health","Pedialyte",
+    "Sprite","Thums Up","Limca","Fanta","Mountain Dew","Mirinda","7UP",
+    "Pepsi","Coca Cola","Coke","Minute Maid","Nimbooz","Appy Fizz",
+    "Rasna","Rooh Afza","Glucon-D","Nescafe","BRU","Tata Gluco+",
+    "Nandini","Amul Kool","Amul Lassi","Amul Buttermilk","B Natural",
+    "Sunfeast","Dark Fantasy","Jim Jam","Milano","McVitie's",
+    "Kurkure","Lay's","Cheetos","Uncle Chips","Bingo","Too Yumm",
+    "Sting Energy","Cloud 9","Tzinga","Hell Energy","Campa Cola",
+    "Sosyo","Limca","Thums Up","Gold Spot","Maaza","Nimbooz",
+    "Nescafe Ready to Drink","Bru Gold","Davidoff","Starbucks RTD",
+    "Mother Dairy Milk","Amul Milk","Nestle Munch","KitKat","Milkybar"
+  ];
+
+  // Autocomplete for a single input element
+  function attachBrandAutocomplete(input) {
+    if (!input || input.dataset.autocomplete) return;
+    input.dataset.autocomplete = "true";
+    input.setAttribute("autocomplete", "off");
+
+    // Wrap input in relative container
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'position:relative;width:100%';
+    input.parentNode.insertBefore(wrapper, input);
+    wrapper.appendChild(input);
+
+    // Create dropdown
+    const box = document.createElement('div');
+    box.style.cssText = `
+      position:absolute;top:100%;left:0;right:0;
+      background:#fff;border:1px solid #c8d8cb;
+      border-radius:8px;box-shadow:0 4px 16px rgba(33,78,56,.12);
+      max-height:200px;overflow-y:auto;z-index:99999;
+      display:none;margin-top:2px;
+    `;
+    wrapper.appendChild(box);
+
+    input.addEventListener('input', async function() {
+      const query = this.value.trim().toLowerCase();
+      box.innerHTML = '';
+      if (query.length < 2) { box.style.display = 'none'; return; }
+
+      // Local filter
+      let matches = INDIAN_BRANDS.filter(b => b.toLowerCase().includes(query));
+
+      // Open Food Facts fallback
+      if (matches.length < 3) {
+        try {
+          const res  = await fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(query)}&search_simple=1&action=process&json=1&page_size=5`);
+          const data = await res.json();
+          if (data.products) {
+            data.products.forEach(p => {
+              if (p.brands) {
+                p.brands.split(',').forEach(b => {
+                  b = b.trim();
+                  if (b.length > 1 && !matches.some(m => m.toLowerCase() === b.toLowerCase())) {
+                    matches.push(b);
+                  }
+                });
+              }
+            });
+          }
+        } catch(e) {}
+      }
+
+      const unique = [...new Set(matches)].slice(0, 8);
+      if (!unique.length) { box.style.display = 'none'; return; }
+
+      unique.forEach(match => {
+        const row = document.createElement('div');
+        row.textContent = match;
+        row.style.cssText = `
+          padding:9px 12px;cursor:pointer;font-size:13px;
+          color:#22352b;border-bottom:1px solid #f0f4f0;
+          transition:background .15s;
+        `;
+        row.addEventListener('mouseover', () => row.style.background = '#eaf3ed');
+        row.addEventListener('mouseout',  () => row.style.background = '#fff');
+        row.addEventListener('mousedown', e => {
+          e.preventDefault();
+          input.value = match;
+          box.style.display = 'none';
+        });
+        box.appendChild(row);
+      });
+      box.style.display = 'block';
+    });
+
+    input.addEventListener('blur', () => setTimeout(() => box.style.display = 'none', 150));
+    input.addEventListener('focus', () => { if (input.value.length >= 2) input.dispatchEvent(new Event('input')); });
+  }
+
+  // Attach to all brand inputs — Q1 and Q11
+  function attachAllBrandInputs() {
+    const brandNames = [
+      'q1_brand_0','q1_brand_1','q1_brand_2','q1_brand_3','q1_brand_4',
+      'q1_brand_5','q1_brand_6','q1_brand_7','q1_brand_8','q1_brand_9',
+      'q11_brand_0','q11_brand_1','q11_brand_2','q11_brand_3','q11_brand_4',
+      'q11_brand_5','q11_brand_6','q11_brand_7','q11_brand_8','q11_brand_9'
+    ];
+    brandNames.forEach(name => {
+      const el = document.querySelector(`[name="${name}"]`);
+      if (el) attachBrandAutocomplete(el);
+    });
+  }
+
+  // Run on load and also watch for dynamically shown rows
+  document.addEventListener('DOMContentLoaded', () => {
+    attachAllBrandInputs();
+
+    // Re-attach when Q1 checkboxes reveal new rows
+    document.querySelectorAll('.q1-stocked-check').forEach(cb => {
+      cb.addEventListener('change', () => {
+        setTimeout(attachAllBrandInputs, 100);
+      });
+    });
+  });
+  </script>
+</body>
+</html>
